@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Eid Al-Adha Mubarak — Najat Khatib</title>
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Cairo:wght@300;400;600;700&family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <canvas id="bg-canvas"></canvas>
+  <div class="particles" id="particles"></div>
+
+  <div class="page">
+
+    <div class="card">
+
+      <!-- Sheep SVG -->
+      <div class="sheep-wrap">
+        <svg class="sheep-svg" viewBox="0 0 240 220" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <radialGradient id="woolGrad" cx="50%" cy="40%" r="55%">
+              <stop offset="0%"   stop-color="#ffffff"/>
+              <stop offset="60%"  stop-color="#ede8dc"/>
+              <stop offset="100%" stop-color="#d4cbb8"/>
+            </radialGradient>
+            <radialGradient id="woolBump1" cx="50%" cy="50%" r="50%">
+              <stop offset="0%"   stop-color="#ffffff" stop-opacity="0.9"/>
+              <stop offset="100%" stop-color="#ddd5c4" stop-opacity="0"/>
+            </radialGradient>
+            <radialGradient id="woolBump2" cx="50%" cy="50%" r="50%">
+              <stop offset="0%"   stop-color="#ffffff" stop-opacity="0.7"/>
+              <stop offset="100%" stop-color="#ccc4b2" stop-opacity="0"/>
+            </radialGradient>
+            <linearGradient id="hornGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%"   stop-color="#c8a96e"/>
+              <stop offset="50%"  stop-color="#a07840"/>
+              <stop offset="100%" stop-color="#7a5a28"/>
+            </linearGradient>
+            <linearGradient id="screenGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%"   stop-color="#a78bfa" stop-opacity="0.5"/>
+              <stop offset="100%" stop-color="#7c3aed" stop-opacity="0"/>
+            </linearGradient>
+            <radialGradient id="headGrad" cx="40%" cy="35%" r="60%">
+              <stop offset="0%"   stop-color="#f5e6c8"/>
+              <stop offset="100%" stop-color="#d4b896"/>
+            </radialGradient>
+          </defs>
+
+          <!-- Body wool back layer -->
+          <circle cx="110" cy="118" r="54" fill="#ddd5c4"/>
+          <circle cx="78"  cy="108" r="37" fill="#ddd5c4"/>
+          <circle cx="142" cy="108" r="37" fill="#ddd5c4"/>
+          <circle cx="72"  cy="125" r="30" fill="#ddd5c4"/>
+          <circle cx="148" cy="125" r="30" fill="#ddd5c4"/>
+          <circle cx="110" cy="135" r="32" fill="#ddd5c4"/>
+
+          <!-- Body wool mid layer -->
+          <circle cx="110" cy="115" r="52" fill="#eee8d8"/>
+          <circle cx="80"  cy="105" r="35" fill="#eee8d8"/>
+          <circle cx="140" cy="105" r="35" fill="#eee8d8"/>
+          <circle cx="95"  cy="92"  r="30" fill="#eee8d8"/>
+          <circle cx="125" cy="92"  r="30" fill="#eee8d8"/>
+          <circle cx="75"  cy="120" r="27" fill="#eee8d8"/>
+          <circle cx="145" cy="120" r="27" fill="#eee8d8"/>
+          <circle cx="110" cy="132" r="30" fill="#eee8d8"/>
+
+          <!-- Body wool top layer bright -->
+          <circle cx="110" cy="112" r="48" fill="url(#woolGrad)"/>
+          <circle cx="82"  cy="102" r="32" fill="url(#woolGrad)"/>
+          <circle cx="138" cy="102" r="32" fill="url(#woolGrad)"/>
+          <circle cx="97"  cy="88"  r="27" fill="url(#woolGrad)"/>
+          <circle cx="123" cy="88"  r="27" fill="url(#woolGrad)"/>
+          <circle cx="110" cy="80"  r="25" fill="url(#woolGrad)"/>
+          <circle cx="77"  cy="117" r="24" fill="url(#woolGrad)"/>
+          <circle cx="143" cy="117" r="24" fill="url(#woolGrad)"/>
+
+          <!-- Wool highlight bumps -->
+          <circle cx="95"  cy="95"  r="14" fill="url(#woolBump1)"/>
+          <circle cx="125" cy="92"  r="12" fill="url(#woolBump1)"/>
+          <circle cx="110" cy="105" r="16" fill="url(#woolBump1)"/>
+          <circle cx="80"  cy="108" r="11" fill="url(#woolBump2)"/>
+          <circle cx="140" cy="108" r="11" fill="url(#woolBump2)"/>
+
+          <!-- Tail -->
+          <circle cx="163" cy="118" r="13" fill="#eee8d8"/>
+          <circle cx="169" cy="113" r="9"  fill="#f5f0e8"/>
+          <circle cx="166" cy="116" r="6"  fill="url(#woolBump1)"/>
+
+          <!-- Head -->
+          <ellipse cx="110" cy="65" rx="27" ry="25" fill="url(#headGrad)"/>
+
+          <!-- HORNS — curved rams horns (on sides of head) -->
+          <!-- Left horn -->
+          <path d="M86 55 C78 44, 63 38, 59 49 C55 60, 65 68, 75 63 C70 58, 66 50, 72 46 C78 42, 85 47, 86 55Z"
+                fill="url(#hornGrad)" stroke="#7a5a28" stroke-width="0.8"/>
+          <path d="M68 47 C66 52, 65 57, 67 61" stroke="#8a6030" stroke-width="1.3" fill="none" stroke-linecap="round"/>
+          <path d="M62 51 C60 56, 60 62, 63 65" stroke="#8a6030" stroke-width="1.1" fill="none" stroke-linecap="round"/>
+          <circle cx="63" cy="42" r="2" fill="#e0c080" opacity="0.6"/>
+
+          <!-- Right horn -->
+          <path d="M134 55 C142 44, 157 38, 161 49 C165 60, 155 68, 145 63 C150 58, 154 50, 148 46 C142 42, 135 47, 134 55Z"
+                fill="url(#hornGrad)" stroke="#7a5a28" stroke-width="0.8"/>
+          <path d="M152 47 C154 52, 155 57, 153 61" stroke="#8a6030" stroke-width="1.3" fill="none" stroke-linecap="round"/>
+          <path d="M158 51 C160 56, 160 62, 157 65" stroke="#8a6030" stroke-width="1.1" fill="none" stroke-linecap="round"/>
+          <circle cx="157" cy="42" r="2" fill="#e0c080" opacity="0.6"/>
+
+          <!-- SOFA (wool tuft) on top of head — fluffy pompon -->
+          <circle cx="110" cy="36" r="13" fill="#eee8d8"/>
+          <circle cx="100" cy="38" r="10" fill="#eee8d8"/>
+          <circle cx="120" cy="38" r="10" fill="#eee8d8"/>
+          <circle cx="105" cy="30" r="9"  fill="#f5f0e8"/>
+          <circle cx="115" cy="30" r="9"  fill="#f5f0e8"/>
+          <circle cx="110" cy="26" r="8"  fill="#f5f0e8"/>
+          <circle cx="103" cy="24" r="7"  fill="url(#woolGrad)"/>
+          <circle cx="117" cy="24" r="7"  fill="url(#woolGrad)"/>
+          <circle cx="110" cy="20" r="7"  fill="url(#woolGrad)"/>
+          <!-- Tuft highlights -->
+          <circle cx="106" cy="22" r="4"  fill="url(#woolBump1)"/>
+          <circle cx="114" cy="22" r="3.5" fill="url(#woolBump1)"/>
+          <circle cx="110" cy="18" r="3"  fill="url(#woolBump1)"/>
+
+          <!-- Ears -->
+          <ellipse cx="83"  cy="71" rx="10" ry="13" fill="#e0c89a" transform="rotate(-15 83 71)"/>
+          <ellipse cx="137" cy="71" rx="10" ry="13" fill="#e0c89a" transform="rotate(15 137 71)"/>
+          <ellipse cx="83"  cy="71" rx="6"  ry="8"  fill="#f4a0a0" transform="rotate(-15 83 71)"/>
+          <ellipse cx="137" cy="71" rx="6"  ry="8"  fill="#f4a0a0" transform="rotate(15 137 71)"/>
+
+          <!-- Happy closed eyes -->
+          <path d="M97 61 Q100.5 57 104 61" stroke="#5a3e28" stroke-width="2.8" fill="none" stroke-linecap="round"/>
+          <path d="M116 61 Q119.5 57 123 61" stroke="#5a3e28" stroke-width="2.8" fill="none" stroke-linecap="round"/>
+
+          <!-- Rosy cheeks -->
+          <ellipse cx="94"  cy="70" rx="8" ry="5" fill="#f4a0a0" opacity="0.5"/>
+          <ellipse cx="126" cy="70" rx="8" ry="5" fill="#f4a0a0" opacity="0.5"/>
+
+          <!-- Smile -->
+          <path d="M101 75 Q110 85 119 75" stroke="#5a3e28" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+
+          <!-- Tongue -->
+          <ellipse cx="110" cy="81" rx="6" ry="5" fill="#f4a0a0"/>
+          <line x1="110" y1="78" x2="110" y2="86" stroke="#e08080" stroke-width="1.2"/>
+
+          <!-- Glasses -->
+          <rect x="89" y="54" width="23" height="16" rx="5" fill="rgba(200,220,255,0.15)" stroke="#1a1a1a" stroke-width="2.8"/>
+          <rect x="114" y="54" width="23" height="16" rx="5" fill="rgba(200,220,255,0.15)" stroke="#1a1a1a" stroke-width="2.8"/>
+          <line x1="112" y1="62" x2="114" y2="62" stroke="#1a1a1a" stroke-width="2.4"/>
+          <line x1="89"  y1="62" x2="82"  y2="59" stroke="#1a1a1a" stroke-width="2.2" stroke-linecap="round"/>
+          <line x1="137" y1="62" x2="144" y2="59" stroke="#1a1a1a" stroke-width="2.2" stroke-linecap="round"/>
+          <circle cx="95"  cy="58" r="3"   fill="white" opacity="0.55"/>
+          <circle cx="120" cy="58" r="3"   fill="white" opacity="0.55"/>
+          <circle cx="97"  cy="60" r="1.2" fill="white" opacity="0.35"/>
+
+          <!-- Legs -->
+          <rect x="87"  y="160" width="13" height="32" rx="6.5" fill="#c8b89a"/>
+          <rect x="103" y="164" width="13" height="30" rx="6.5" fill="#c8b89a"/>
+          <rect x="119" y="164" width="13" height="30" rx="6.5" fill="#c8b89a"/>
+          <rect x="135" y="160" width="13" height="32" rx="6.5" fill="#c8b89a"/>
+          <rect x="89"  y="160" width="5"  height="32" rx="4"   fill="rgba(255,255,255,0.3)"/>
+          <rect x="105" y="164" width="5"  height="30" rx="4"   fill="rgba(255,255,255,0.3)"/>
+          <rect x="121" y="164" width="5"  height="30" rx="4"   fill="rgba(255,255,255,0.3)"/>
+          <rect x="137" y="160" width="5"  height="32" rx="4"   fill="rgba(255,255,255,0.3)"/>
+
+          <!-- Hooves -->
+          <ellipse cx="93"  cy="193" rx="8" ry="5.5" fill="#4a3020"/>
+          <ellipse cx="109" cy="195" rx="8" ry="5.5" fill="#4a3020"/>
+          <ellipse cx="125" cy="195" rx="8" ry="5.5" fill="#4a3020"/>
+          <ellipse cx="141" cy="193" rx="8" ry="5.5" fill="#4a3020"/>
+
+          <!-- Laptop -->
+          <rect x="128" y="122" width="58" height="40" rx="5" fill="#2d1b69"/>
+          <rect x="131" y="125" width="52" height="34" rx="3" fill="#5b21b6"/>
+          <rect x="131" y="125" width="52" height="34" rx="3" fill="url(#screenGrad)"/>
+          <text x="157" y="139" text-anchor="middle" font-family="Poppins,sans-serif" font-size="7.5" font-weight="700" fill="white" opacity="0.95">khatib</text>
+          <text x="157" y="151" text-anchor="middle" font-family="Poppins,sans-serif" font-size="7.5" font-weight="700" fill="white" opacity="0.95">najat</text>
+          <rect x="124" y="162" width="66" height="6" rx="3" fill="#374151"/>
+          <rect x="120" y="168" width="74" height="6" rx="3" fill="#1f2937"/>
+
+          <!-- Stars -->
+          <text x="22"  y="52"  font-size="17" class="star-anim" style="animation-delay:0s">⭐</text>
+          <text x="182" y="42"  font-size="15" class="star-anim" style="animation-delay:0.5s">✨</text>
+          <text x="15"  y="145" font-size="13" class="star-anim" style="animation-delay:1s">🌟</text>
+          <text x="190" y="135" font-size="14" class="star-anim" style="animation-delay:1.5s">⭐</text>
+          <text x="195" y="75"  font-size="11" class="star-anim" style="animation-delay:0.8s">✨</text>
+        </svg>
+        <div class="sheep-shadow"></div>
+      </div>
+
+      <!-- Content -->
+      <div class="content">
+        <h1 class="title-script">Eid-al-Adha</h1>
+        <p class="title-sub">— Mubarak —</p>
+
+        <p class="message">
+          بمناسبة عيد الأضحى المبارك 🌙<br/>
+          كل عام وأنتم بخير وصحة وسعادة ✨
+        </p>
+
+        <div class="date-pill" id="today-date"></div>
+
+        <a href="https://www.instagram.com/n_developpeuse?igsh=ejA4NncwemhvNTNl"
+           target="_blank" rel="noopener noreferrer"
+           class="insta-btn">
+          <svg class="insta-icon" viewBox="0 0 24 24" fill="none">
+            <defs>
+              <linearGradient id="ig" x1="0%" y1="100%" x2="100%" y2="0%">
+                <stop offset="0%"   stop-color="#f09433"/>
+                <stop offset="50%"  stop-color="#dc2743"/>
+                <stop offset="100%" stop-color="#bc1888"/>
+              </linearGradient>
+            </defs>
+            <rect x="2" y="2" width="20" height="20" rx="5" stroke="url(#ig)" stroke-width="2" fill="none"/>
+            <circle cx="12" cy="12" r="4.5" stroke="url(#ig)" stroke-width="2" fill="none"/>
+            <circle cx="17.5" cy="6.5" r="1.2" fill="url(#ig)"/>
+          </svg>
+          <span>@n_developpeuse</span>
+          <span class="arrow">↗</span>
+        </a>
+
+        <div class="signature">
+          <span class="sig-name">Najat Khatib</span>
+          <span class="sig-dot">·</span>
+          <span class="sig-role">Full Stack Developer</span>
+        </div>
+      </div>
+
+    </div>
+
+    <p class="footer"> by Najat Khatib</p>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
